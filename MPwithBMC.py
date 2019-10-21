@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+#Metabolic pathway modeling with original BMC
 # In[1]:
 
 
