@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+#Metabolic pathwey model with modified BMC
 # In[1]:
 
 
