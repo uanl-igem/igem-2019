@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+#Model of expression with an inductor at 3uM
 # In[1]:
 
 
