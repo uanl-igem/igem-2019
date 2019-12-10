@@ -38,9 +38,21 @@ Ymin = 2.4e-3 #Min transcription rate (RPU's)
 Ymax = 3 #Max transcription rate (RPU's)
 K = 26 #Marionette constant (uM)
 n2 = 2.3 #Another marionette constant
-a = 29.97 #ligM traduction rate
-b = 26.30 #aroY traduction rate
-c = 41.30 #catA traduction rate
+a = gfppps*gfpl*af/(al*gfps) #ligM translation rate
+af = 9190.07 #aRBS force in AU
+al = 471 #aSize in aminoacids
+am = 55325 #aMass in Da
+b = gfppps*gfpl*bf/(bl*gfps) #aroY translation rate
+bf = 10010.81 #b...
+bl = 526
+bm = 54012
+c = gfppps*gfpl*cf/(cl*gfps) #catA translation rate
+cf = 10010.48 #c...
+cl = 335
+cm = 33434
+gfpf = 69.09 #Reference GFP-RBS force
+gfpl = 238 #GFP size
+gfppps = 0.4 #GFP translation rate
 Ecr = 0.000385 #ligM dilution rate
 EEcr = 0.000385 #aroY dilution rate
 EEEcr = 0.000385 #catA dilution rate
@@ -222,9 +234,9 @@ print("catA enzyme: "+str(round((sol[400003,7])/2,5))+" mM")
 
 
 print("Final mass of:")
-print("ligM: "+str(round((sol[400003,5])*55325/(1000),1))+" fg")
-print("aroY: "+str(round((sol[400003,6])*54012/(1000),1))+" fg")
-print("catA: "+str(round((sol[400003,7])*33434/(1000),1))+" fg")
+print("ligM: "+str(round((sol[400003,5])*am/(1000),1))+" fg")
+print("aroY: "+str(round((sol[400003,6])*bm/(1000),1))+" fg")
+print("catA: "+str(round((sol[400003,7])*cm/(1000),1))+" fg")
 print()
 print("Common E. Coli dry weight: 284 fg")
 print("Common total protein mass on E. Coli: 156 fg")
